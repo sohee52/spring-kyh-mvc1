@@ -4,13 +4,13 @@
     - 프론트 컨트롤러는 하나의 서블릿만으로 모든 클라이언트 요청을 받아들이고, 적절한 컨트롤러를 찾아 호출합니다.
     - 이렇게 “입구를 하나로” 통합하면 공통 로직(인증, 로깅 등)을 한곳에서 처리할 수 있고, 개별 컨트롤러는 더 이상 서블릿 API에 의존하지 않아도 됩니다.
 
-    ![img_3.png](img_3.png)
+    ![img_3.png](images/img_3.png)
 - 프론트 컨트롤러 패턴이 스프링 MVC와 무슨 관계가 있죠?
     - 스프링 MVC의 **DispatcherServlet**이 바로 이 FrontController 패턴을 구현한 핵심 컴포넌트입니다.
     - 따라서 우리가 단계별로 만든 예제는 DispatcherServlet의 축소판이라 볼 수 있습니다.
 - 1단계(V1) 구조 및 코드
 
-    ![img_4.png](img_4.png)
+    ![img_4.png](images/img_4.png)
     - 서블릿과 비슷한 모양의 컨트롤러 인터페이스를 도입한다.
 
         ```java
@@ -189,7 +189,7 @@
     - URL-패턴(`/front-controller/v1/*`)에 따라 **controllerMap**에서 컨트롤러를 찾아 `process()`를 실행하는 구조로 전환해 “단일 진입점”을 확보했습니다.
 - 2단계(V2) 구조 및 코드
 
-    ![img_5.png](img_5.png)
+    ![img_5.png](images/img_5.png)
     - MyView
 
         ```java
@@ -386,7 +386,7 @@
     - 이로써 컨트롤러는 뷰의 경로만 넘기면 되고, 공통 뷰 처리 로직은 FrontController가 일관되게 수행합니다
 - 3단계(V3) 구조 및 코드
 
-    ![img_6.png](img_6.png)
+    ![img_6.png](images/img_6.png)
 
     - ModelView
 
@@ -660,7 +660,7 @@
     - 정리 : FrontController가 요청 파라미터를 `paramMap`에 담아 전달하고, 컨트롤러는 `ModelView`에 **논리 뷰 이름**과 모델 데이터를 채워 반환합니다. 이렇게 하면 테스트가 쉬워지고, 뷰 폴더가 바뀌어도 FrontController만 수정하면 됩니다.
 - 4단계(V4) 구조 및 코드
 
-    ![img_7.png](img_7.png)
+    ![img_7.png](images/img_7.png)
     - 기본적인 구조는 V3와 같다. 대신에 컨트롤러가 ModelView 를 반환하지 않고, ViewName 만 반환한다.
     - ControllerV4
 
@@ -841,7 +841,7 @@
     - FrontController가 나머지(Model→View Resolver→Render)를 처리해줘서 코드가 훨씬 간결해졌습니다.
 - 5단계(V5) 구조 및 코드
 
-    ![img_8.png](img_8.png)
+    ![img_8.png](images/img_8.png)
     - 핸들러 어댑터
         - 중간에 어댑터 역할을 하는 어댑터가 추가되었는데 이름이 핸들러 어댑터이다.
         - 여기서 어댑터 역할을 해주는 덕분에 다양한 종류의 컨트롤러를 호출할 수 있다.
