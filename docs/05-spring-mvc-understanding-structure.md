@@ -5,11 +5,11 @@
 - 직접 만든 MVC 프레임워크와 스프링 MVC를 비교
     - 직접 만든 MVC 프레임워크 구조
 
-      ![img_9.png](img_9.png)
+      ![img_9.png](images/img_9.png)
 
     - SpringMVC 구조
 
-      ![img_10.png](img_10.png)
+      ![img_10.png](images/img_10.png)
 
 - 스프링 MVC의 핵심 구성 요소는 무엇인가요?
 
