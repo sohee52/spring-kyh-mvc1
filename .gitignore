@@ -6,8 +6,3 @@
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/
-
-### imgae file ###
-*.png
-*.jpg
-*.jpeg
