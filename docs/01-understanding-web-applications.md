@@ -28,7 +28,7 @@
     - WAS, DB 만으로 시스템 구성 가능
     - **WAS는 정적 리소스, 애플리케이션 로직 모두 제공 가능**
 
-    ![img.png](img.png)
+    ![img.png](images/img.png)
 - 웹 시스템 구성 - WAS, DB 단점
     - WAS가 너무 많은 역할을 담당, 서버 과부하 우려
     - 가장 비싼 애플리케이션 로직이 정적 리소스 때문에 수행이 어려울 수 있음
@@ -38,7 +38,7 @@
     - 웹 서버는 애플리케이션 로직같은 동적인 처리가 필요하면 WAS에 요청을 위임
     - WAS는 중요한 애플리케이션 로직 처리 전담
 
-    ![img_1.png](img_1.png)
+    ![img_1.png](images/img_1.png)
 
 - 웹 시스템 구성 - WEB, WAS, DB 장점
     - 효율적인 리소스 관리
@@ -74,7 +74,7 @@
 
 - 서블릿 특징
 
-    ![img_2.png](img_2.png)
+    ![img_2.png](images/img_2.png)
     - urlPatterns(/hello)의 URL이 호출되면 서블릿 코드가 실행
     - HTTP 요청 정보를 편리하게 사용할 수 있는 HttpServletRequest
     - HTTP 응답 정보를 편리하게 제공할 수 있는 HttpServletResponse
