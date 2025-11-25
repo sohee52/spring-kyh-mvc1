@@ -839,7 +839,7 @@ public class ResponseBodyController {
 
 - @ResponseBody 사용 원리
 
-  ![img_11.png](img_11.png)
+  ![img_11.png](images/img_11.png)
 
     - @ResponseBody 를 사용
         - HTTP의 BODY에 문자 내용을 직접 반환
@@ -918,7 +918,7 @@ public class ResponseBodyController {
 
 - ArgumentResolver의 역할은?
 
-    ![img_12.png](img_12.png)
+    ![img_12.png](images/img_12.png)
     - HttpServletRequest , Model 은 물론이고, @RequestParam , @ModelAttribute 같은 애노테이션 그리고 @RequestBody , HttpEntity 같은 HTTP 메시지를 처리하는 부분까지 매우 큰 유연함을 보여주었다. 이렇게 **파라미터를 유연하게 처리**할 수 있는 이유가 바로 ArgumentResolver 덕분이다.
 - ArgumentResolver
     - ArgumentResolver 의 supportsParameter() 를 호출해서 **해당 파라미터를 지원하는지 체크**하고,
@@ -931,7 +931,7 @@ public class ResponseBodyController {
 
 - HTTP 메시지 컨버터의 위치
 
-  ![img_13.png](img_13.png)
+  ![img_13.png](images/img_13.png)
 
     - 요청의 경우 @RequestBody 를 처리하는 ArgumentResolver 가 있고, HttpEntity 를 처리하는ArgumentResolver 가 있다. 이 ArgumentResolver 들이 HTTP 메시지 컨버터를 사용해서 필요한 객체를 생성하는 것이다.
     - 응답의 경우 @ResponseBody 와 HttpEntity 를 처리하는 ReturnValueHandler 가 있다. 그리고 여기에서 HTTP 메시지 컨버터를 호출해서 응답 결과를 만든다.
